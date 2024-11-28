@@ -1,117 +1,107 @@
 var config = {
-    // style: 'mapbox://styles/mapbox/streets-v12',
+    style: 'mapbox://styles/sfduncan/cm404rfe100m801qqftvbfesq',
     // leave commented to use Mapbox Standard Style
-    accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN',
-    showMarkers: true,
+    accessToken: 'pk.eyJ1Ijoic2ZkdW5jYW4iLCJhIjoiY2x2Z3QybHh2MHlwcTJpczJyejAyYWVpNyJ9.DLToR14vGnafkx-pCGj6KA',
+    showMarkers: false,
     markerColor: '#3FB1CE',
-    //projection: 'equirectangular',
+    //projection: 'mercator',
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
-    inset: true,
+    inset: false,
     insetOptions: {
         markerColor: 'orange'
     },
     insetPosition: 'bottom-right',
-    theme: 'dark',
+    theme: 'light',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
-    title: 'Your Title Goes Here',
-    subtitle: 'The Storytelling Template helps you create an awesome animated map story with ease.',
-    byline: 'By a I.M. Amapper',
-    footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
             id: 'slug-style-id',
-            alignment: 'left',
+            alignment: 'right',
             hidden: false,
-            title: 'San Francisco',
-            image: './assets/san-fran.jpeg',
-            description: 'The first chapter contains a title, image, and camera view for San Francisco, California. Update the chapter data to make it your own.',
+            title: 'Yurok Indian Reservation',
+            image: './assets/YurokTribe.jpg',
+            description: '<b>About:</b> The Yurok Tribe is the largest Native American tribe in California, both in terms of population and land area. The reservation is located along the Klamath River in Northern California. Historically, the tribe has faced significant challenges in accessing reliable internet services, with some areas lacking even basic cell reception. Recognizing the critical need for connectivity, especially highlighted during the COVID-19 pandemic, the tribe has undertaken initiatives to improve broadband access for its members.<br><b>Funding Received:</b> The Yurok Tribe received $61,661,365.50 from the NTIA\'s Tribal Broadband Connectivity Program to enhance broadband infrastructure on the reservation.<br><b>Number of Households Served:</b> The project aims to connect 921 unserved Native American households on the Yurok Reservation and ancestral lands with high-speed internet services',
             location: {
-                center: [-122.418398, 37.759483],
-                zoom: 8.5,
-                pitch: 60,
+                center: [-123.74, 41.36],
+                zoom: 9.71,
+                pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                { layer: 'thisislines-40jnwu', opacity: 0 }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                { layer: 'thisislines-40jnwu', opacity: 0 }
             ]
         },
         {
             id: 'second-identifier',
             alignment: 'right',
             hidden: false,
-            title: 'Washington, D.C.',
-            image: './assets/washington-dc.jpg',
-            description: 'The second chapter flies to Washington, D.C., updates the camera pitch, and slowly rotates. <br>  <br> Washington, D.C., the capital of the United States, is a vibrant city known for its iconic landmarks, including the White House, the U.S. Capitol, and the Washington Monument. It serves as the political heart of the nation and a center for history, culture, and international diplomacy.',
+            title: 'Hoopa Valley Indian Reservation',
+            image: './assets/HoopaValley.jpeg',
+            description: '<b>About:</b> The Hoopa Valley Tribe is a federally recognized Native American tribe located in Northern California. The reservation spans approximately 92,000 acres and is characterized by its rural and mountainous terrain, which has historically posed challenges for infrastructure development, including broadband connectivity. To address the digital divide, the tribe established Acorn Wireless, a tribally owned and operated internet service provider, aiming to enhance internet access for its members.<br><b>Funding Received:</b> The Hoopa Valley Tribe was awarded $65,140,407.72 through the Tribal Broadband Connectivity Program (TBCP) administered by the National Telecommunications and Information Administration (NTIA).<br><b>Number of Households Served:</b> The broadband infrastructure project is designed to directly connect 1,045 unserved Native American households on the reservation.',
             location: {
-                center: [-77.020636, 38.886900],
-                zoom: 8.5,
-                pitch: 60,
-                bearing: -43.2,
+                center: [-123.60, 41.100],
+                zoom: 10.62,
+                pitch: 0,
+                bearing: 0,
                 // flyTo additional controls-
                 // These options control the flight curve, making it move
                 // slowly and zoom out almost completely before starting
                 // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
+                speed: .5, // make the flying slow
+                curve: 1, // change the speed at which it zooms out
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: true,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                { layer: 'thisislines-40jnwu', opacity: 0 } // Keep this layer hidden
+            ],
+            onChapterExit: [
+                { layer: 'thisislines-40jnwu', opacity: 0 } // Ensure it remains hidden
+            ]
         },
         {
             id: 'third-identifier',
-            alignment: 'left',
+            alignment: 'right',
             hidden: false,
-            title: 'Geneva',
-            image: './assets/geneva.jpg',
-            description: 'Geneva, Switzerland, is a picturesque city nestled along the shores of Lake Geneva, surrounded by the Alps and Jura mountains. Known as a global hub for diplomacy and finance, it is home to numerous international organizations, including the United Nations and the Red Cross.',
+            title: 'Tule River Indian Reservation',
+            image: './assets/TuleRiver.jpg',
+            description: '<b>About:</b> The Tule River Indian Tribe is a federally recognized tribe located in the foothills of the Sierra Nevada Mountains in California. The reservation encompasses approximately 85 square miles and is home to the tribe\'s members. The community has faced challenges related to limited broadband access, impacting education, healthcare, and economic opportunities.<br><b>Funding Received:</b> The Tule River Indian Tribe was awarded $500,000 through the NTIA\'s Tribal Broadband Connectivity Program.<br><b>Number of Households Served:</b> The funding is designated to expand an existing fiber network directly to 15 unserved Tribal households and 4 unserved Tribal community anchor institutions, providing high-speed reliable internet access at a minimum of 100/20 Mbps.Geneva, Switzerland, is a picturesque city nestled along the shores of Lake Geneva, surrounded by the Alps and Jura mountains. Known as a global hub for diplomacy and finance, it is home to numerous international organizations, including the United Nations and the Red Cross.',
             location: {
-                center: [6.15116, 46.20595],
-                zoom: 12.52,
+                center: [-118.65, 36.040],
+                zoom: 11.17,
                 pitch: 8.01,
                 bearing: 0.00
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                { layer: 'thisislines-40jnwu', opacity: 0 } // Keep this layer hidden
+            ],
+            onChapterExit: [
+                { layer: 'thisislines-40jnwu', opacity: 0 } // Ensure it remains hidden
+            ]
         },
         {
             id: 'fourth-chapter',
-            alignment: 'fully',
+            alignment: 'right',
             hidden: false,
-            title: 'Buenos Aires',
-            image: './assets/buenos-aires.jpg',
-            description: 'Buenos Aires, the capital of Argentina, is a dynamic city known for its European-inspired architecture, vibrant tango culture, and rich culinary scene. Often called the "Paris of South America," it blends historic charm with modern energy.  You can add as many chapters as you need, just copy the JSON data and make changes.',
+            title: 'Imagining a Tribal Mesh Network',
+            description: 'A tribal mesh network across California could revolutionize broadband access for Indigenous communities by creating a decentralized and resilient system of connectivity. Mesh networks rely on interconnected nodes—tribal offices, community centers, and homes—to transmit data efficiently, even in areas with limited infrastructure. This approach would allow tribal communities to bypass reliance on traditional internet service providers, enabling self-determination over digital infrastructure. By linking tribal lands, underserved areas, and key middle-mile connections, such a network could bridge the digital divide, foster economic development, and enhance access to critical services like telehealth, education, and governance.',
             location: {
-                center: [-58.54195, -34.71600],
-                zoom: 4,
+                center: [-116, 37.5],
+                zoom: 5.2,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                { layer: 'thisislines-40jnwu', opacity: 1 } // Turn the layer on
+            ],
+            onChapterExit: [] // No further action needed
         }
     ]
 };
