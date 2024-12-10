@@ -42,7 +42,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Hoopa Valley Indian Reservation',
-            image: './assets/HoopaValley.jpeg',
+            image: './assets/HoopaValley.png',
             description: '<b>About:</b> The Hoopa Valley Tribe is a federally recognized Native American tribe located in Northern California. The reservation spans approximately 92,000 acres and is characterized by its rural and mountainous terrain, which has historically posed challenges for infrastructure development, including broadband connectivity. To address the digital divide, the tribe established Acorn Wireless, a tribally owned and operated internet service provider, aiming to enhance internet access for its members.<br><b>Funding Received:</b> Awarded $65,140,407.72 through the Tribal Broadband Connectivity Program (TBCP) administered by the National Telecommunications and Information Administration (NTIA).<br><b>Number of Households Served:</b> The broadband infrastructure project is designed to directly connect 1,045 unserved Native American households on the reservation.',
             location: {
                 center: [-123.60, 41.100],
